@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/auth_db}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+server:
+  port: ${SERVER_PORT:8081}
+
+jwt:
+  secret: ${JWT_SECRET:defaultsecretkey12345678901234567890}
+  expiration: ${JWT_EXPIRATION:86400000}
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

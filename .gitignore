@@ -1,0 +1,52 @@
+# Папка скомпилированных классов (для Gradle)
+build/
+
+# Файлы для IDE
+/.idea/
+/*.iml
+
+# Файлы конфигурации IntelliJ IDEA
+.idea/
+
+# Файлы конфигурации Eclipse
+/.project
+/.classpath
+/.settings/
+
+# Файлы конфигурации NetBeans
+/nbproject/
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Каталоги с зависимостями и сборками
+.gradle/
+/build/
+/out/
+
+# Docker
+.docker/
+
+# Docker Compose
+docker-compose.override.yml
+docker-compose.yml
+*.env
+
+# Настройки среды разработки
+/.vscode/
+
+# Файлы конфигурации PostgreSQL
+pgdata/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Прочее
+*.bak
+*.swp

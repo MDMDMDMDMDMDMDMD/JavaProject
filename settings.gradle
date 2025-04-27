@@ -1,0 +1,6 @@
+rootProject.name = 'liveq'
+
+include 'auth-service'
+include 'business-service'
+include 'queue-service'
+include 'notification-service'

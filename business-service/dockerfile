@@ -1,0 +1,16 @@
+# Базовый образ с JDK 21
+FROM eclipse-temurin:21-jdk
+
+# Устанавливаем рабочую директорию внутри контейнера
+WORKDIR /app
+
+# Копируем собранный JAR-файл в контейнер
+# Путь build/libs/*.jar — это стандарт для Gradle-проектов после сборки
+COPY build/libs/*.jar app.jar
+
+
+# Открываем порт (тот, который указан в переменной SERVER_PORT)
+EXPOSE 8082
+
+# Команда запуска приложения
+ENTRYPOINT ["java", "-jar", "app.jar"]
